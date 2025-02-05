@@ -52,7 +52,11 @@ impl Handler for Component {
         let (headers, body) = Request::into_parts(request);
         let mut headers = headers.entries();
         headers.retain(|(k, v)| match (k.as_str(), v.as_slice()) {
-            ("accept-encoding", b"deflate") => {
+            ("accept-encoding", value)
+                if std::str::from_utf8(value)
+                    .map(|v| v.contains("deflate"))
+                    .unwrap_or(false) =>
+            {
                 accept_deflated = true;
                 false
             }
