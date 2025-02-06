@@ -11,8 +11,9 @@ license = "Apache-2.0 WITH LLVM-exception"
 anyhow = { version = "1.0.93" , features = ['std'] }
 wasi = "0.11.0"
 wasi-nn = "0.6.0"
-wit-bindgen = { version = "0.38.0", features = ['default'] }
-wit-bindgen-rt = { version = "0.38.0", features = ['async'] }
+# temporarily use git dep until https://github.com/bytecodealliance/wit-bindgen/pull/1157 is released:
+wit-bindgen = { git = "https://github.com/bytecodealliance/wit-bindgen", features = ['default'] }
+wit-bindgen-rt = { git = "https://github.com/bytecodealliance/wit-bindgen", features = ['async'] }
 libc = { version = "0.2.112", default-features = true }
 getrandom = "0.2.9"
 futures = { version = "0.3.27", default-features = false, features = ['alloc'] }
