@@ -2,5 +2,6 @@
 
 members = [
     "crates/echo",
-    "crates/middleware"
+    "crates/middleware",
+    "oops"
 ]

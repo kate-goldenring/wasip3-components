@@ -13,6 +13,4 @@ component = "my-app"
 [component.my-app]
 source = "composed.wasm"
 allowed_outbound_hosts = []
-[component.my-app.build]
-command = "cargo build --target wasm32-wasip1 --release"
-watch = ["src/**/*.rs", "Cargo.toml"]
+
