@@ -11,7 +11,7 @@ route = "/..."
 component = "my-app"
 
 [component.my-app]
-source = "async-http-echo-component.wasm"
+source = "composed.wasm"
 allowed_outbound_hosts = []
 [component.my-app.build]
 command = "cargo build --target wasm32-wasip1 --release"
